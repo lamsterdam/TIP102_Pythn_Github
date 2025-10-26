@@ -18,19 +18,19 @@
 #   return ""
 
 # i
-# def first_symmetrical_landmark(landmarks):
-#     for each in landmarks:
-#         left = 0
-#         right = len(each) - 1
-#         while left < right:
-#             if each[left] != each[right]:
-#                 break
-#             else:
-#                 left += 1
-#                 right -=1
-#         if left >= right:
-#             return each
-#     return ""
+def first_symmetrical_landmark(landmarks):
+    for each in landmarks:
+        left = 0
+        right = len(each) - 1
+        while left < right:
+            if each[left] != each[right]:
+                break
+            else:
+                left += 1
+                right -=1
+        if left >= right:
+            return each
+    return ""
 
 # print(first_symmetrical_landmark(["canyon","forest","rotor","mountain"])) 
 # print(first_symmetrical_landmark(["plateau","valley","cliff"])) 
@@ -57,19 +57,19 @@
 
 
 # i
-# def terrain_elevation_match(terrain):
-#     smallest_avail = 0
-#     largest_avail = len(terrain)
-#     new_array = []
-#     for i in range(len(terrain)):
-#         if terrain[i] == "I":
-#             new_array.append(smallest_avail)
-#             smallest_avail += 1
-#         else:
-#             new_array.append(largest_avail)
-#             largest_avail -= 1
-#     new_array.append(smallest_avail)
-#     return new_array
+def terrain_elevation_match(terrain):
+    smallest_avail = 0
+    largest_avail = len(terrain)
+    new_array = []
+    for i in range(len(terrain)):
+        if terrain[i] == "I":
+            new_array.append(smallest_avail)
+            smallest_avail += 1
+        else:
+            new_array.append(largest_avail)
+            largest_avail -= 1
+    new_array.append(smallest_avail)
+    return new_array
 
 # print(terrain_elevation_match("IDID")) 
 # print(terrain_elevation_match("III")) 
@@ -95,20 +95,20 @@
 #   return concat val
 
 # i
-# def find_the_log_conc_val(logs):
-#     left = 0
-#     right = len(logs) - 1
-#     concat_val = 0
-#     while left <= right:
-#         if left != right:
-#             new_num = int(str(logs[left]) + str(logs[right]))
-#             concat_val += new_num
-#         else:
-#             new_num = logs[left]
-#             concat_val += new_num
-#         left += 1
-#         right -= 1
-#     return concat_val
+def find_the_log_conc_val(logs):
+    left = 0
+    right = len(logs) - 1
+    concat_val = 0
+    while left <= right:
+        if left != right:
+            new_num = int(str(logs[left]) + str(logs[right]))
+            concat_val += new_num
+        else:
+            new_num = logs[left]
+            concat_val += new_num
+        left += 1
+        right -= 1
+    return concat_val
 
 # print(find_the_log_conc_val([7, 52, 2, 4])) 
 # print(find_the_log_conc_val([5, 14, 13, 8, 12])) 
@@ -150,20 +150,20 @@
 
 
 # i
-# from collections import deque
-# def count_explorers(explorers, supplies):
-#     myQueue = deque()
-#     for each in explorers:
-#         myQueue.append(each)
-#     while supplies and supplies[0] in myQueue:
-#         top_queue = myQueue.popleft()
-#         print(f"top pf queue {top_queue}")
-#         if top_queue == supplies[0]:
-#             top_stack = supplies.pop(0)
-#             print(f"top of stack {top_stack}")
-#         else:
-#             myQueue.append(top_queue)
-#     return len(myQueue)
+from collections import deque
+def count_explorers(explorers, supplies):
+    myQueue = deque()
+    for each in explorers:
+        myQueue.append(each)
+    while supplies and supplies[0] in myQueue:
+        top_queue = myQueue.popleft()
+        print(f"top pf queue {top_queue}")
+        if top_queue == supplies[0]:
+            top_stack = supplies.pop(0)
+            print(f"top of stack {top_stack}")
+        else:
+            myQueue.append(top_queue)
+    return len(myQueue)
 
 # print(count_explorers([1, 1, 0, 0], [0, 1, 0, 1]))  
 # print(count_explorers([1, 1, 1, 0, 0, 1], [1, 0, 0, 0, 1, 1])) 

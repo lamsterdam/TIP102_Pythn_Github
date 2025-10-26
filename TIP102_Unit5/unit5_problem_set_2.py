@@ -23,12 +23,12 @@
 #         print(current.value, end=" -> " if current.next else "\n")
 #         current = current.next
 
-# def halve_list(head):
-#     curr = head
-#     while curr is not None:
-#         curr.value = curr.value / 2
-#         curr = curr.next
-#     return head
+def halve_list(head):
+    curr = head
+    while curr is not None:
+        curr.value = curr.value / 2
+        curr = curr.next
+    return head
 
 # node_one = Node(5)
 # node_two = Node(6)
@@ -65,12 +65,12 @@
 #         print(current.value, end=" -> " if current.next else "\n")
 #         current = current.next
 
-# def delete_tail(head):
-#     curr = head
-#     while curr.next.next is not None:
-#         curr = curr.next
-#     curr.next = None
-#     return head
+def delete_tail(head):
+    curr = head
+    while curr.next.next is not None:
+        curr = curr.next
+    curr.next = None
+    return head
 
 
 # butterfly = Node("Common Butterfly")
@@ -111,14 +111,14 @@
 #         print(current.value, end=" -> " if current.next else "\n")
 #         current = current.next
 
-# def find_min(head):
-#     min_value = head.value
-#     curr = head.next
-#     while curr is not None:
-#         if curr.value < min_value:
-#             min_value = curr.value
-#         curr = curr.next
-#     return min_value
+def find_min(head):
+    min_value = head.value
+    curr = head.next
+    while curr is not None:
+        if curr.value < min_value:
+            min_value = curr.value
+        curr = curr.next
+    return min_value
 
 # head1 = Node(5, Node(6, Node(7, Node(8))))
 # head2 = Node(8, Node(5, Node(6, Node(7))))
@@ -156,14 +156,14 @@
 #         print(current.value, end=" -> " if current.next else "\n")
 #         current = current.next
 
-# def tail_to_head(head):
-#     curr = head
-#     while curr.next.next is not None:
-#         curr = curr.next
-#     new_head = curr.next
-#     curr.next = None
-#     new_head.next = head
-#     return new_head
+def tail_to_head(head):
+    curr = head
+    while curr.next.next is not None:
+        curr = curr.next
+    new_head = curr.next
+    curr.next = None
+    new_head.next = head
+    return new_head
 
 # daisy = Node("Daisy")
 # mario = Node("Mario")

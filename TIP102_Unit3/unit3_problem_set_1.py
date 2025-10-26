@@ -20,22 +20,22 @@
 #   return len of stack equals 0    
 
 # i
-# def is_valid_post_format(posts):
-#     match = {')': '(', ']': '[', '}': '{'}
-#     stack = []
+def is_valid_post_format(posts):
+    match = {')': '(', ']': '[', '}': '{'}
+    stack = []
 
-#     for ch in posts:
-#         if ch in '([{':
-#             stack.append(ch)                       
-#         elif ch in ')]}':
-#             if not stack or stack[-1] != match[ch]:
-#                 return False                      
-#             stack.pop()                           
-#         else:
+    for ch in posts:
+        if ch in '([{':
+            stack.append(ch)                       
+        elif ch in ')]}':
+            if not stack or stack[-1] != match[ch]:
+                return False                      
+            stack.pop()                           
+        else:
          
-#             continue
+            continue
 
-#     return len(stack) == 0
+    return len(stack) == 0
 
 # print(is_valid_post_format("()"))
 # print(is_valid_post_format("()[]{}")) 
@@ -57,14 +57,14 @@
 
 
 # i
-# def reverse_comments_queue(comments):
-#     new_stack = []
-#     for each in comments:
-#         new_stack.append(each)
-#     new_array = []
-#     while len(new_stack) > 0:
-#         new_array.append(new_stack.pop())
-#     return new_array
+def reverse_comments_queue(comments):
+    new_stack = []
+    for each in comments:
+        new_stack.append(each)
+    new_array = []
+    while len(new_stack) > 0:
+        new_array.append(new_stack.pop())
+    return new_array
 
 # print(reverse_comments_queue(["Great post!", "Love it!", "Thanks for sharing."]))
 
@@ -91,20 +91,20 @@
 #   return true
 
 # i
-# def is_symmetrical_title(title):
-#     left = 0
-#     right = len(title) - 1
-#     while left < right:
-#         if not title[left].isalpha():
-#             left += 1
-#         elif not title[right].isalpha():
-#             right -= 1
-#         else:
-#             if title[left].lower() != title[right].lower():
-#                 return False
-#         left += 1
-#         right -= 1
-#     return True
+def is_symmetrical_title(title):
+    left = 0
+    right = len(title) - 1
+    while left < right:
+        if not title[left].isalpha():
+            left += 1
+        elif not title[right].isalpha():
+            right -= 1
+        else:
+            if title[left].lower() != title[right].lower():
+                return False
+        left += 1
+        right -= 1
+    return True
 
 # print(is_symmetrical_title("A Santa at NASA"))
 # print(is_symmetrical_title("Social Media")) 
